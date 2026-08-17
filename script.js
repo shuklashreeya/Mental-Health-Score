@@ -2,7 +2,7 @@
 // MindBalance: frontend logic
 // ============================================================
 
-const API_URL = "http://127.0.0.1:8000/predict";
+const API_URL = "https://mental-health-score-t2ic.onrender.com";
 
 // ---- field configuration (mirrors the StudentData pydantic model) -----
 const FIELD_RULES = {
