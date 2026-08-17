@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindBalance: Lifestyle Mental Health Signal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<div class="page">
+
+  <header class="site-header">
+    <span class="decor decor-leaf" aria-hidden="true">⌁</span>
+    <span class="decor decor-spark" aria-hidden="true">✦</span>
+    <div class="wordmark">
+      <span class="wordmark-mark">◐</span>
+      <span class="wordmark-text">MindBalance</span>
+    </div>
+    <p class="tagline">A gentle snapshot of the habits that shape your everyday balance.🌿</p>
+  </header>
+
+  <main class="layout">
+
+    <!-- FORM -->
+    <form id="predict-form" class="panel form-panel" novalidate>
+
+      <section class="field-group">
+        <div class="group-heading">
+          <span class="group-eyebrow">01</span>
+          <span class="group-icon" aria-hidden="true">◌</span>
+          <h2>Who you are ✦</h2>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="10" max="100" placeholder="e.g. 21" required>
+            <span class="field-hint">10–100</span>
+            <span class="field-error" data-error-for="age"></span>
+          </div>
+          <div class="field">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <span class="field-error" data-error-for="gender"></span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="country">Country</label>
+            <input list="country-list" id="country" name="country" placeholder="e.g. India" autocomplete="off" required>
+            <datalist id="country-list">
+              <option value="India"></option>
+              <option value="USA"></option>
+              <option value="Canada"></option>
+              <option value="Australia"></option>
+              <option value="UK"></option>
+              <option value="Germany"></option>
+              <option value="Mexico"></option>
+              <option value="Turkey"></option>
+              <option value="France"></option>
+              <option value="Other"></option>
+            </datalist>
+            <span class="field-error" data-error-for="country"></span>
+          </div>
+          <div class="field">
+            <label for="academic_level">Academic level</label>
+            <select id="academic_level" name="academic_level" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="High School">High School</option>
+              <option value="Undergraduate">Undergraduate</option>
+              <option value="Graduate">Graduate</option>
+            </select>
+            <span class="field-error" data-error-for="academic_level"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="field-group">
+        <div class="group-heading">
+          <span class="group-eyebrow">02</span>
+          <span class="group-icon" aria-hidden="true">⌁</span>
+          <h2>Digital habits ✦</h2>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="most_used_platform">Most used platform</label>
+            <select id="most_used_platform" name="most_used_platform" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Facebook</option>
+              <option>LinkedIn</option>
+              <option>Instagram</option>
+              <option>Snapchat</option>
+              <option>Twitter</option>
+              <option>YouTube</option>
+              <option>TikTok</option>
+              <option>LINE</option>
+              <option>KakaoTalk</option>
+              <option>VKontakte</option>
+              <option>WhatsApp</option>
+              <option>WeChat</option>
+            </select>
+            <span class="field-error" data-error-for="most_used_platform"></span>
+          </div>
+          <div class="field">
+            <label for="purpose_of_use">Main purpose</label>
+            <select id="purpose_of_use" name="purpose_of_use" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="Networking">Networking</option>
+              <option value="Education">Education</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="News">News</option>
+            </select>
+            <span class="field-error" data-error-for="purpose_of_use"></span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="avg_daily_usage_hours">Avg. daily usage <span class="unit">hrs</span></label>
+            <input type="number" id="avg_daily_usage_hours" name="avg_daily_usage_hours" min="1" max="24" step="0.1" placeholder="e.g. 4.5" required>
+            <span class="field-hint">1–24</span>
+            <span class="field-error" data-error-for="avg_daily_usage_hours"></span>
+          </div>
+          <div class="field">
+            <label for="daily_unlocks">Daily phone unlocks</label>
+            <input type="number" id="daily_unlocks" name="daily_unlocks" min="0" step="1" placeholder="e.g. 60" required>
+            <span class="field-hint">0 or more</span>
+            <span class="field-error" data-error-for="daily_unlocks"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="field-group">
+        <div class="group-heading">
+          <span class="group-eyebrow">03</span>
+          <span class="group-icon" aria-hidden="true">☼</span>
+          <h2>Daily rhythm ✦</h2>
+        </div>
+        <div class="field-row three">
+          <div class="field">
+            <label for="study_hours">Study <span class="unit">hrs</span></label>
+            <input type="number" id="study_hours" name="study_hours" min="0" max="24" step="0.1" placeholder="e.g. 3" required>
+            <span class="field-error" data-error-for="study_hours"></span>
+          </div>
+          <div class="field">
+            <label for="physical_activity_hours">Activity <span class="unit">hrs</span></label>
+            <input type="number" id="physical_activity_hours" name="physical_activity_hours" min="0" max="24" step="0.1" placeholder="e.g. 1" required>
+            <span class="field-error" data-error-for="physical_activity_hours"></span>
+          </div>
+          <div class="field">
+            <label for="sleep_hours_per_night">Sleep <span class="unit">hrs</span></label>
+            <input type="number" id="sleep_hours_per_night" name="sleep_hours_per_night" min="0" max="24" step="0.1" placeholder="e.g. 7" required>
+            <span class="field-error" data-error-for="sleep_hours_per_night"></span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="stress_level">Stress level</label>
+            <select id="stress_level" name="stress_level" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+              <option value="Very High">Very High</option>
+            </select>
+            <span class="field-error" data-error-for="stress_level"></span>
+          </div>
+        </div>
+      </section>
+
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span class="btn-label">Discover my balance</span>
+        <span class="btn-arrow">→</span>
+      </button>
+    </form>
+
+    <!-- RESULT / VISUAL PANEL -->
+    <aside class="panel result-panel">
+
+      <div class="wheel-block">
+        <p class="wheel-eyebrow">Your balance wheel</p>
+        <div id="wheel-wrap" class="wheel-wrap">
+          <svg id="balance-wheel" viewBox="0 0 300 300" aria-hidden="true"></svg>
+        </div>
+        <p class="wheel-caption">A little picture of the habits shaping your result.</p>
+        <div class="breath-note" aria-hidden="true">
+          <span class="breath-orb"></span>
+          <span>Take a breath</span>
+        </div>
+      </div>
+
+      <div id="state-idle" class="state-block">
+        <img src="assets/cici-main.png" alt="" class="cici-idle-img" aria-hidden="true">
+        <p>Fill in your details, then take a little look at your balance.</p>
+      </div>
+
+      <div id="state-loading" class="state-block hidden">
+        <div class="cici-loading-wrap">
+          <img src="assets/cici-calm.png" alt="" class="cici-loading-img" aria-hidden="true">
+        </div>
+        <p id="loading-message">Taking a quiet look at your habits...</p>
+      </div>
+
+      <div id="state-error" class="state-block error-block hidden">
+        <p class="error-title">Couldn't get a prediction</p>
+        <p id="error-message" class="error-message"></p>
+      </div>
+
+      <div id="state-result" class="result-card hidden">
+
+        <div class="cici-companion">
+          <div class="cici-portrait">
+            <img id="cici-image" class="cici-img" src="assets/cici-calm.png" alt="Cici, your MindBalance companion">
+          </div>
+          <div class="cici-bubble">
+            <span class="cici-name">Cici <span class="cici-name-mark" aria-hidden="true">✦</span></span>
+            <p id="cici-message">Here is your balance, let's take a little look together.</p>
+          </div>
+        </div>
+
+        <p class="result-eyebrow">Your lifestyle score</p>
+        <div class="score-dial">
+          <svg viewBox="0 0 220 130" id="score-arc"></svg>
+          <div class="score-number">
+            <span id="score-value">--</span>
+          </div>
+        </div>
+        <p id="score-label" class="score-label">Your balance is taking shape</p>
+        <p class="disclaimer">Based on the lifestyle patterns reflected in your responses.</p>
+
+        <div class="habit-summary">
+          <div class="habit-card">
+            <span class="habit-card-label">Strongest habit</span>
+            <strong id="strongest-habit">Study</strong>
+          </div>
+          <div class="habit-card">
+            <span class="habit-card-label">A little care</span>
+            <strong id="care-habit">Screen</strong>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+ 
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
