@@ -403,6 +403,7 @@ button{ font-family: inherit; }
   width: 100%;
   max-width: 220px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 #score-arc{
@@ -471,12 +472,23 @@ button{ font-family: inherit; }
 }
 
 @media (max-width: 560px){
-  .page{ padding: 36px 16px 60px; }
-  .form-panel{ padding: 26px 20px; }
+  .page{ padding: 32px 14px 56px; }
+  .form-panel{ padding: 24px 18px; }
+  .result-panel{ padding: 22px 16px; }
   .field-row,
   .field-row.three{
     grid-template-columns: 1fr;
   }
+  .field input,
+  .field select{
+    /* 16px prevents iOS Safari from auto-zooming on focus */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px){
+  .wordmark-text{ font-size: 1.4rem; }
+  .tagline{ font-size: 0.95rem; }
 }
 
 /* reduced motion */
@@ -666,7 +678,9 @@ body{overflow-x:hidden;}
 /* speech bubble styled as a small illustrated note, not a chat bubble */
 .cici-bubble{
   position:relative;
+  width:100%;
   max-width:320px;
+  box-sizing:border-box;
   background:#FBFAF4;
   border:1px solid var(--line-soft);
   border-radius:16px;
