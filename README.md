@@ -169,38 +169,30 @@ VS Code - Development environment
 Mental-Health-Score/
 │
 ├── assets/
-│   └── Cici and other visual assets
-│
 ├── ML_project.ipynb
-│   └── Data analysis, preprocessing, feature engineering,
-│       model training and evaluation
-│
 ├── Mental_Health_Model.pkl
-│   └── Trained machine learning model
-│
 ├── main.py
-│   └── FastAPI backend and prediction endpoint
-│
 ├── index.html
-│   └── Main frontend structure
-│
 ├── script.js
-│   └── Frontend logic, API communication and result handling
-│
 ├── style.css
-│   └── Styling and responsive UI
-│
 ├── requirements.txt
-│   └── Python dependencies
-│
 └── README.md
-    └── Project documentation
+
+| File | Purpose |
+|---|---|
+| `ML_project.ipynb` | ML data analysis, preprocessing, feature engineering, training and evaluation |
+| `Mental_Health_Model.pkl` | Trained ML model |
+| `main.py` | FastAPI backend and prediction endpoint |
+| `index.html` | Frontend structure |
+| `script.js` | Frontend logic and API communication |
+| `style.css` | UI styling and responsive design |
+| `requirements.txt` | Python dependencies |
+| `assets/` | Cici and other visual assets |
     
 🔌 Backend & API:-
 
 The FastAPI backend connects the frontend with the trained machine learning model.
-
-The main prediction flow is:
+The main production flow is as follows:-
 
 Frontend Input
       ↓
