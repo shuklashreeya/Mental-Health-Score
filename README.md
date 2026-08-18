@@ -103,39 +103,35 @@ MindBalance connects the machine learning model, backend, and frontend into one 
           ↓                         ↓
     Balance Wheel                  Cici
           ↓                         ↓
-   Visual representation      Gentle feedback
+    Visual representation      Gentle feedback
+
+   
 
 The frontend sends the user's inputs to the FastAPI backend through the prediction endpoint.
-
 The backend loads the trained machine learning model, processes the incoming data in the required format, and returns the prediction.
-
 The frontend then displays the result as a score out of 10 along with the visual balance wheel and Cici's feedback.
 
 🌷 Meet Cici
 
-Cici is MindBalance's virtual wellness companion.
-
-She was designed to make the prediction feel more personal rather than presenting the user with only a numerical result.
-
-Cici provides gentle feedback based on the user's result and lifestyle patterns.
+-Cici is MindBalance's virtual wellness companion.
+-She was designed to make the prediction feel more personal rather than presenting the user with only a numerical result.
+-Cici provides gentle feedback based on the user's result and lifestyle patterns.
 
 Her design is intentionally:
 
-Calm
-Friendly
-Encouraging
-Simple
-Non-judgmental
+-Calm
+-Friendly
+-Encouraging
+-Simple
+-Non-judgmental
 
-Cici is part of the user experience built around the machine learning prediction.
+"Cici is part of the user experience built around the machine learning prediction."
 
-📊 Interactive Balance Wheel
+📊 Interactive Balance Wheel:-
 
-MindBalance includes an interactive balance wheel that provides a visual representation of different areas of the user's lifestyle.
-
-The wheel responds to the information entered by the user and complements the final machine learning prediction.
-
-This allows users to understand their result visually instead of relying only on a numerical score.
+-MindBalance includes an interactive balance wheel that provides a visual representation of different areas of the user's lifestyle.
+-The wheel responds to the information entered by the user and complements the final machine learning prediction.
+-This allows users to understand their result visually instead of relying only on a numerical score.
 
 🛠️ Tech Stack:-
 
