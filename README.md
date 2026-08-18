@@ -164,10 +164,9 @@ GitHub - Version control and source code
 VS Code - Development environment
 
 
-📁 Project Structure:- 
+## 📁 Project Structure
 
 ```text
-
 Mental-Health-Score/
 │
 ├── assets/
@@ -183,8 +182,8 @@ Mental-Health-Score/
 
 | File | Purpose |
 |---|---|
-| `ML_project.ipynb` | ML data analysis, preprocessing, feature engineering, training and evaluation |
-| `Mental_Health_Model.pkl` | Trained ML model |
+| `ML_project.ipynb` | Data analysis, preprocessing, feature engineering, model training and evaluation |
+| `Mental_Health_Model.pkl` | Trained machine learning model |
 | `main.py` | FastAPI backend and prediction endpoint |
 | `index.html` | Frontend structure |
 | `script.js` | Frontend logic and API communication |
@@ -192,29 +191,36 @@ Mental-Health-Score/
 | `requirements.txt` | Python dependencies |
 | `assets/` | Cici and other visual assets |
     
-🔌 Backend & API:-
+
+## 🔌 Backend & API
 
 The FastAPI backend connects the frontend with the trained machine learning model.
-The main production flow is as follows:-
+
+### Prediction Flow
 
 ```text
-
-Frontend Input
-      ↓
-POST request
-      ↓
-FastAPI /predict
-      ↓
-Input validation
-      ↓
+User Input
+    ↓
+Frontend
+    ↓
+POST /predict
+    ↓
+FastAPI
+    ↓
+Input Validation
+    ↓
 Trained ML Model
-      ↓
+    ↓
 Prediction
-      ↓
+    ↓
 Frontend Result
 ```
 
-FastAPI also makes the prediction functionality accessible through an API, allowing the frontend to communicate with the trained model without directly handling the machine learning logic.
+The backend receives the user's lifestyle information through the `/predict` endpoint.
+
+Pydantic is used to validate the incoming data, while the trained machine learning model generates the prediction.
+
+The returned prediction is then sent back to the frontend and displayed as the user's balance score.
 
 📈 What I Worked On:-
 
