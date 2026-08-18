@@ -195,7 +195,6 @@ Mental-Health-Score/
 │
 └── README.md
     └── Project documentation
-
     
 🔌 Backend & API:-
 
@@ -261,6 +260,7 @@ This project involved both the machine learning development and the deployment o
 
 🌷 Try MindBalance -
 💻 Source Code : https://mental-health-score-1-93t2.onrender.com/
+
 View the GitHub Repository-
 🔮 Future Improvements : https://github.com/shuklashreeya/Mental-Health-Score
 
