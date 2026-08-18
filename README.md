@@ -166,6 +166,8 @@ VS Code - Development environment
 
 📁 Project Structure:- 
 
+```text
+
 Mental-Health-Score/
 │
 ├── assets/
@@ -177,6 +179,7 @@ Mental-Health-Score/
 ├── style.css
 ├── requirements.txt
 └── README.md
+```
 
 | File | Purpose |
 |---|---|
@@ -194,6 +197,8 @@ Mental-Health-Score/
 The FastAPI backend connects the frontend with the trained machine learning model.
 The main production flow is as follows:-
 
+```text
+
 Frontend Input
       ↓
 POST request
@@ -207,6 +212,7 @@ Trained ML Model
 Prediction
       ↓
 Frontend Result
+```
 
 FastAPI also makes the prediction functionality accessible through an API, allowing the frontend to communicate with the trained model without directly handling the machine learning logic.
 
